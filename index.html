@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portal Mahasiswa IF UNPAR</title>
+		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+		<link rel="stylesheet" href="style.css">
+	
+	</head>
+	<body>
+		<header class="w3-flat-peter-river">
+			<table>
+				<td>
+					<img src="img/Logo-UNPAR.png" class="pict">
+				</td>
+				<td>
+					<h1 class="portal">Portal Mahasiswa</h1>
+				</td>
+				<td class="prodi">Program Studi Informatika<br>Universitas Katolik Parahyangan
+				</td>
+			</table>
+		</header>
+		<div class="carousel-container">
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-colors-white w3-large w3-flat-silver w3-padding">1/3-Computational Thinking Workshop</span>
+                </div>
+                <img src="img/img1.jpg" style="width: 100%; height:100%;">
+			</div>
+			
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-colors-white w3-large w3-flat-silver w3-padding">2/3-CHIPS 2018</span>
+                </div>
+                <img src="img/img2.jpg"style="width: 100%; height:100%;">
+			</div>
+			
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-colors-white w3-large w3-flat-silver w3-padding">3/3-Pengguna IDE Terbaik</span>
+                </div>
+                <img src="img/img3.jpeg"style="width: 100%; height:100%;">
+            </div>
+		</div>
+		<div class="w3-flat-belize-hole w3-flat-peter-river">
+			<input type="button"  class="w3-button" class="tablinks" onclick="openContent(Object, 'Profile')" value="Profile">
+			<input type="button"  class="w3-button" class="tablinks" onclick="openContent(Object, 'Akademik')" value="Akademik">
+			<input type="button"  class="w3-button"class="tablinks" onclick="openContent(Object, 'Agenda')" value="Agenda">
+		  </div>
+		  
+		  <div id="Profile" class="tabs">
+			<h2 class="w3-border-bottom" style="margin-left: 15px;">Profile</h2>
+			<div style="margin-left: 15px;">
+				<a>Nama <a class="padd1">:Mahasiswa</a></a><br>
+				<a>NPM<a class="padd2">:20160065</a></a><br>
+				<a>Dosen Wali<a class="padd3">:Husnul Hakim, M.T.</a></a>
+			</div>
+			<div class="w3-container">
+				<h5>Unggah foto profil</h5>
+				<div class="upload-drop-zone" id="drop-zone"></div>
+				<button type="submit" class="w3-flat-belize-hole" style="border: none;">Unggah</button>
+			</div>
+		  </div>
+		  
+		  <div id="Akademik" class="tabs" style="display:none">
+			<h2 class="w3-border-bottom" style="margin-left: 15px;">Akademik</h2>
+			<p style="margin-left: 15px;">Content Akademik</p>
+		  </div>
+		  
+		  <div id="Agenda" class="tabs" style="display:none">
+			<h2 class="w3-border-bottom" style="margin-left: 15px;">Agenda</h2>
+				<button onclick="showCont('show1')" class="w3-btn w3-block w3-flat-peter-river w3-left-align w3-flat-belize-hole" style="margin-left: 30px;">Jadwal Kuliah</button>
+			<div id="show1" class="w3-container w3-hide">
+				<table id="tab1">
+					<tr class="w3-border-bottom">
+						<th >Mata Kuliah</th>
+						<th>Dosen</th>
+						<th>Ruangan</th>
+						<th>Hari</th>
+						<th>Jam</th>
+					  </tr>
+					  <tr >
+						<td rowspan="2">PUK</td>
+						<td>Keenan Leman</td>
+						<td>9121</td>
+						<td>Senin</td>
+						<td>13-15</td>
+					  </tr>
+					  <tr class="w3-border-bottom">
+						<td>Maria Veronica</td>
+						<td>9121</td>
+						<td>Senin</td>
+						<td>15-17</td>
+					  </tr>
+					  <tr>
+						<td rowspan="2">IMK</td>
+						<td>Maria Veronica</td>
+						<td>9018</td>
+						<td>Kamis</td>
+						<td>10-12</td>
+					  </tr>
+					  <tr>
+						<td>Marshal</td>
+						<td>9016</td>
+						<td>Kamis</td>
+						<td>10-12</td>
+					  </tr>
+				</table>
+			</div>
+				<button onclick="showCont('show2')" class="w3-btn w3-block w3-flat-peter-river w3-left-align w3-flat-belize-hole" style="margin-left: 30px;">Jadwal UTS</button>
+				<div id="show2" class="w3-container w3-hide" style="margin-left: 20px;">
+					<p>Jadwal tidak tersedia</p>
+				</div>
+				<button onclick="showCont('show3')" class="w3-btn w3-block w3-flat-peter-river w3-left-align w3-flat-belize-hole" style="margin-left: 30px;">Jadwal UAS</button>
+				<div id="show3" class="w3-container w3-hide" style="margin-left: 20px;">
+					<p>Jadwal tidak tersedia</p>
+				</div>
+				<button onclick="showCont('show4')" class="w3-btn w3-block w3-flat-peter-river w3-left-align w3-flat-belize-hole" style="margin-left: 30px;">Jadwal Kegiatan</button>
+				<div id="show4" class="w3-container w3-hide" style="margin-left: 20px;">
+					<p>Jadwal tidak tersedia</p>
+				</div>
+		  </div>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+</html>
